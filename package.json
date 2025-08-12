@@ -1,0 +1,8 @@
+{
+  "name": "AlignedWest Chiropractic",
+  "description": "Personalized chiropractic care blending mind, body, and soul for holistic wellness. At AlignedWest Chiropractic, we provide compassionate, results-driven care.",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r dev"
+  }
+}
