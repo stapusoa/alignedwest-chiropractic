@@ -67,3 +67,9 @@ export default tseslint.config([
   },
 ])
 ```
+
+### Push to backend repo
+
+```
+git subtree push --prefix=apps/backend backend main
+```
