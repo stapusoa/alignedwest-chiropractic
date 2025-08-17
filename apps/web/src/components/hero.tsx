@@ -24,7 +24,7 @@ export function Hero({
   return (
     <section
       className={cn(
-        "relative w-full min-h-120 overflow-hidden flex items-center",
+        "relative w-full min-h-120 flex items-center",
         heroVariants({ size, variant, container }),
         className
       )}
@@ -36,12 +36,12 @@ export function Hero({
       />
       <div className="flex relative w-full items-center -gap-2 max-w-6xl">
         {/* Text / content left-aligned */}
-        <div className="flex relative z-20 w-full px-8 text-left">
+        <div className="flex relative z-20 w-1/2 px-8 text-left">
           {children}
         </div>
 
         {/* ScrollHero Animation on the right */}
-        <div className="flex relative top-0 right-0 h-full w-full z-0">
+        <div className="flex relative top-0 right-0 h-full w-[120%] z-0">
           <ScrollHero />
         </div>
       </div>
