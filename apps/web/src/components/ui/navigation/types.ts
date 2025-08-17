@@ -6,6 +6,7 @@ export type PageType =
   | 'about'
   | 'services'
   | 'resources'
+  | 'contact'
   | 'blog'
   | 'clinic'
   | 'book'

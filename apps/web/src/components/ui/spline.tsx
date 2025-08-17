@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
-const frames = Array.from({ length: 24 }, (_, i) => 
-  `http://localhost:3001/frames/flower-${i + 1}.webp`
+
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
+const frames = Array.from({ length: 24 }, (_, i) =>
+  `${BASE_URL}/frames/flower-${i + 1}.webp`
 );
 
 export function ScrollHero() {

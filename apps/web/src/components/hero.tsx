@@ -11,7 +11,6 @@ export function Hero({
   variant,
   container,
   backgroundImage,
-  backgroundOpacity = 20, // default 20% overlay
 }: HeroProps) {
   const backgroundImageStyles = backgroundImage
     ? {
