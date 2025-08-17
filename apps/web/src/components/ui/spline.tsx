@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 
-const BASE_URL = import.meta.env.VITE_BACKEND_URL;
-const FRAME_COUNT = 24;
-const maxScroll = 800; // adjust depending on how far down the page the animation should run
+const FRAME_COUNT = 24; // adjust based on how many frames you exported
+const maxScroll = 800; // total scroll distance for animation
+
+// Use environment variable, fallback to local backend
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
 
 // Generate frame URLs
 const frames = Array.from({ length: FRAME_COUNT }, (_, i) =>
@@ -14,7 +16,7 @@ export function ScrollHero() {
   const frameImages = useRef<HTMLImageElement[]>([]);
   const currentFrame = useRef(0);
 
-  // Preload all frames
+  // Preload frames
   useEffect(() => {
     frames.forEach((src) => {
       const img = new Image();
@@ -24,42 +26,43 @@ export function ScrollHero() {
   }, []);
 
   useEffect(() => {
-  let animationFrameId: number;
+    let animationFrameId: number;
 
-  const animate = () => {
-    const scrollTop = window.scrollY;
-    const targetFrame = Math.min(
-      FRAME_COUNT - 1,
-      (scrollTop / maxScroll) * (FRAME_COUNT - 1)
-    );
+    const animate = () => {
+      const scrollTop = window.scrollY;
+      const targetFrame = Math.min(
+        FRAME_COUNT - 1,
+        (scrollTop / maxScroll) * (FRAME_COUNT - 1)
+      );
 
-    currentFrame.current += (targetFrame - currentFrame.current) * 0.2;
+      // Smooth lerp transition
+      currentFrame.current += (targetFrame - currentFrame.current) * 0.2;
 
-    const canvas = canvasRef.current;
-    if (!canvas) return; // Guard: canvas might be null
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return; // Guard: context might be null
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
 
-    const img = frameImages.current[Math.floor(currentFrame.current)];
-    if (img) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    }
+      const img = frameImages.current[Math.floor(currentFrame.current)];
+      if (img) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
 
     animationFrameId = requestAnimationFrame(animate);
-  };
 
-  animationFrameId = requestAnimationFrame(animate);
-
-  return () => cancelAnimationFrame(animationFrameId);
-}, []);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   return (
-    <div className="relative w-full h-[800px] overflow-hidden top-36">
+    <div className="relative w-full h-[800px] overflow-hidden">
       <canvas
         ref={canvasRef}
-        width={1920} // adjust for your frames
-        height={1080} // adjust for your frames
+        width={1920} // match your frame resolution
+        height={1080} // match your frame resolution
         className="w-full h-full object-cover"
       />
     </div>
