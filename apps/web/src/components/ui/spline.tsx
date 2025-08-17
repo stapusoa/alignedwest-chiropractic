@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 const FRAME_COUNT = 24;
-const maxScroll = 600; // adjust depending on how far down the page the animation should run
+const maxScroll = 800; // adjust depending on how far down the page the animation should run
 
 // Generate frame URLs
 const frames = Array.from({ length: FRAME_COUNT }, (_, i) =>
