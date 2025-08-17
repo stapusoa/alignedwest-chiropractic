@@ -55,7 +55,7 @@ export function ScrollHero() {
 }, []);
 
   return (
-    <div className="relative w-full h-[800px] overflow-hidden top-36">
+    <div className="relative w-full h-[800px] top-36">
       <canvas
         ref={canvasRef}
         width={1920} // adjust for your frames
