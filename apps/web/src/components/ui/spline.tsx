@@ -58,7 +58,7 @@ export function ScrollHero() {
   }, []);
 
   return (
-    <div className="relative w-full h-[800px] overflow-hidden">
+    <div className="relative w-full h-[800px] top-36">
       <canvas
         ref={canvasRef}
         width={1920} // match your frame resolution
