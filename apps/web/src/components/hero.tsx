@@ -14,11 +14,11 @@ export function Hero({
 }: HeroProps) {
   const backgroundImageStyles = backgroundImage
     ? {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }
     : {};
 
   return (
@@ -32,18 +32,21 @@ export function Hero({
     >
       {/* Gradient Overlay (20%) */}
       <div
-  className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 opacity-30"
+        className="absolute inset-0 z-10 w-full pointer-events-none bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 opacity-30"
       />
+      <div className="flex relative w-full items-center -gap-2 max-w-6xl">
+        {/* Text / content left-aligned */}
+        <div className="flex relative z-20 w-full px-8 text-left">
+          {children}
+        </div>
 
-      {/* ScrollHero Animation on the right */}
-      <div className="absolute top-0 right-0 h-full w-1/2 z-0">
-        <ScrollHero />
+        {/* ScrollHero Animation on the right */}
+        <div className="flex relative top-0 right-0 h-full w-full z-0">
+          <ScrollHero />
+        </div>
       </div>
 
-      {/* Text / content left-aligned */}
-      <div className="relative z-20 w-full max-w-6xl px-8 text-left">
-        {children}
-      </div>
+
     </section>
   );
 }
@@ -57,11 +60,11 @@ export function HeroContent({
 }: HeroContentProps) {
   return (
     <div className={cn("space-y-6", className)}>
-      <h1 className="text-8xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight whitespace-pre-line">
+      <h1 className="text-7xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight whitespace-pre-line">
         {title}
       </h1>
       {subtitle && (
-        <p className="text-3xl sm:text-xl lg:text-2xl text-white max-w-3xl whitespace-pre-line">
+        <p className="text-2xl sm:text-xl lg:text-2xl text-white max-w-3xl whitespace-pre-line">
           {subtitle}
         </p>
       )}
