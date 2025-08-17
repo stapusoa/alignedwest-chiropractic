@@ -36,7 +36,7 @@ export function Hero({
       />
 
       {/* ScrollHero Animation on the right */}
-      <div className="absolute top-0 right-0 h-full w-1/2 z-0 overflow-hidden">
+      <div className="absolute top-0 right-0 h-full w-1/2 z-0">
         <ScrollHero />
       </div>
 
