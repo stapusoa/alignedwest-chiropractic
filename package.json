@@ -4,5 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "pnpm -r dev"
+  },
+  "dependencies": {
+    "@splinetool/react-spline": "^4.1.0"
   }
 }

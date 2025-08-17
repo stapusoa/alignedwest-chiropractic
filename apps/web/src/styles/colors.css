@@ -1,0 +1,130 @@
+/* Full Tailwind Base Colors */
+:root {
+  /* Slate (earthy version) */
+  --grey-50:  #fdfcf8;
+  --grey-100: #f4f1ea;
+  --grey-200: #e3ddd0;
+  --grey-300: #c9c0aa;
+  --grey-400: #a89f86;
+  --grey-500: #8c8269;
+  --grey-600: #746d5a;
+  --grey-700: #5c5649;
+  --grey-800: #3f3a30;
+  --grey-900: #2c281e;
+  --grey-1000: #1a170f;
+
+  /* Cherry (deep red) */
+  --cherry-50: #fff4f4;
+  --cherry-100: #ffe6e7;
+  --cherry-200: #f7c3c3;
+  --cherry-300: #ff6565;
+  --cherry-400: #e44444;
+  --cherry-500: #b73939;
+  --cherry-600: #ab2a2a;
+  --cherry-700: #931616;
+  --cherry-800: #8a0a0a;
+  --cherry-900: #811123;
+  --cherry-1000: #671213;
+
+  /* Tangerine (soft orange) */
+  --tangerine-50: #fff3ea;
+  --tangerine-100: #ffdbc2;
+  --tangerine-200: #ffc088;
+  --tangerine-300: #feac55;
+  --tangerine-400: #f89938;
+  --tangerine-500: #f88017;
+  --tangerine-600: #f66e05;
+  --tangerine-700: #d96c39;
+  --tangerine-800: #cf5c27;
+  --tangerine-900: #ba4914;
+  --tangerine-1000: #903a12;
+
+  /* Amber (clay-like gold) */
+  --amber-50:  #fffbf0;
+  --amber-100: #fef4d9;
+  --amber-200: #fbf49c;
+  --amber-300: #f8cd72;
+  --amber-400: #eab32f;
+  --amber-500: #c98f0a;
+  --amber-600: #a36d07;
+  --amber-700: #805607;
+  --amber-800: #624206;
+  --amber-900: #4c3305;
+  --amber-1000: #2f1e03;
+
+  /* Olive-green (using lime & green mix) */
+  --olive-50:  #f3fbed;
+  --olive-100: #e1f5d1;
+  --olive-200: #c2e7a4;
+  --olive-300: #a5d373;
+  --olive-400: #86b94a;
+  --olive-500: #6b9934;
+  --olive-600: #547a29;
+  --olive-700: #3f5b1f;
+  --olive-800: #2f4517;
+  --olive-900: #233513;
+  --olive-1000: #121d08;
+
+  /* Teal (using blue & green mix) */
+  --teal-50:  #f0fdfa;
+  --teal-100: #e6fff9;
+  --teal-200: #acf8e2;
+  --teal-300: #7be7bc;
+  --teal-400: #6dc497;
+  --teal-500: #4ba58e;
+  --teal-600: #339999;
+  --teal-700: #007478;
+  --teal-800: #005f5a;
+  --teal-900: #0b4f4a;
+  --teal-1000: #022f2e;
+
+  /* Sky (deep blue) */
+  --sky-50:  #f2fbff;
+  --sky-100: #e3f6ff;
+  --sky-200: #b7e7ff;
+  --sky-300: #8cd8ff;
+  --sky-400: #4dc0f9;
+  --sky-500: #0794dc;
+  --sky-600: #016699;
+  --sky-700: #154d8c;
+  --sky-800: #10377b;
+  --sky-900: #0e236d;
+  --sky-1000: #0f1031;
+
+  /* Fuchsia (pink and purples) */
+  --fuchsia-50:  #fbeeff;
+  --fuchsia-100: #f8e2ff;
+  --fuchsia-200: #f2cdff;
+  --fuchsia-300: #e8a4ff;
+  --fuchsia-400: #df80ff;
+  --fuchsia-500: #d453ff;
+  --fuchsia-600: #c128f4;
+  --fuchsia-700: #9b0ccb;
+  --fuchsia-800: #74049a;
+  --fuchsia-900: #550271;
+  --fuchsia-1000: #3f0b4f;
+}
+
+@theme {
+  --color-primary: var(--colors-tangerine-400);
+  --color-primary-light: var(--colors-tangerine-100);
+  --color-primary-dark: var(--colors-tangerine-600);
+  --color-secondary: var(--colors-teal-400);
+  --color-secondary-light: var(--colors-teal-100);
+  --color-secondary-dark: var(--colors-teal-600);
+  --color-accent: var(--colors-fuchsia-600);
+  --color-accent-light: var(--colors-fuchsia-300);
+  --color-accent-dark: var(--colors-fuchsia-1000);
+  --color-success: var(--colors-olive-500);
+  --color-success-light: var(--colors-olive-100);
+  --color-success-dark: var(--colors-olive-700);
+  --color-warning: var(--colors-amber-300);
+  --color-warning-light: var(--colors-amber-200);
+  --color-warning-dark: var(--colors-amber-600);
+  --color-error: var(--colors-cherry-700);
+  --color-error-light: var(--colors-cherry-300);
+  --color-error-dark: var(--colors-cherry-900);
+  --color-info: var(--colors-sky-600);
+  --color-info-light: var(--colors-sky-300);
+  --color-info-dark: var(--colors-sky-1000);
+}
