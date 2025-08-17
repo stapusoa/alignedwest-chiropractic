@@ -58,12 +58,12 @@ export function ScrollHero() {
   }, []);
 
   return (
-    <div className="relative w-full h-[800px] top-36">
+    <div className="relative w-full h-full">
       <canvas
         ref={canvasRef}
         width={1920} // match your frame resolution
         height={1080} // match your frame resolution
-        className="w-full h-full object-contain"
+        className="w-full h-auto object-cover"
       />
     </div>
   );
