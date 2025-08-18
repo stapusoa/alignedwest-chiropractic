@@ -34,17 +34,15 @@ export function Hero({
       <div
         className="absolute inset-0 z-10 w-full pointer-events-none bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 opacity-30"
       />
-      <div className="flex relative w-full items-center -gap-2 max-w-6xl">
         {/* Text / content left-aligned */}
-        <div className="flex relative z-20 w-2/5 px-8 text-left">
+        <div className="flex relative z-20 w-full max-w-6xl items-center px-8 text-left">
           {children}
         </div>
 
         {/* ScrollHero Animation on the right */}
-        <div className="flex relative top-30 right-0 h-full w-3/5 z-0">
+        <div className="flex absolute top-30 right-0 h-full w-3/5 z-0">
           <ScrollHero />
         </div>
-      </div>
 
 
     </section>
