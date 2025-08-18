@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const FRAME_COUNT = 24; // adjust based on how many frames you exported
+const FRAME_COUNT = 60; // adjust based on how many frames you exported
 const maxScroll = 800; // total scroll distance for animation
 
 // Use environment variable, fallback to local backend
